@@ -1,0 +1,629 @@
+{
+  "models": [
+    {
+      "id": "llama32",
+      "name": "Llama 3.2",
+      "family": "Meta",
+      "size": "3B",
+      "checkpoint": "meta-llama/Llama-3.2-3B-Instruct",
+      "verified": true,
+      "source": "https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct",
+      "routes": [
+        {
+          "provider": "cloudflare",
+          "model": "@cf/meta/llama-3.2-3b-instruct",
+          "free": true,
+          "available": false,
+          "reasoning": "none",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        },
+        {
+          "provider": "openrouter",
+          "model": "meta-llama/llama-3.2-3b-instruct",
+          "revision": "meta-llama/llama-3.2-3b-instruct",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "maxTokens": 117964,
+          "parameters": [
+            "frequency_penalty",
+            "logit_bias",
+            "logprobs",
+            "max_tokens",
+            "min_p",
+            "presence_penalty",
+            "repetition_penalty",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "top_k",
+            "top_logprobs",
+            "top_p"
+          ],
+          "promptPrice": 5e-8,
+          "completionPrice": 3.3e-7
+        },
+        {
+          "provider": "huggingface",
+          "model": "meta-llama/Llama-3.2-3B-Instruct:featherless-ai",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "llama31",
+      "name": "Llama 3.1",
+      "family": "Meta",
+      "size": "8B",
+      "checkpoint": "meta-llama/Llama-3.1-8B-Instruct",
+      "verified": true,
+      "source": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct",
+      "routes": [
+        {
+          "provider": "cloudflare",
+          "model": "@cf/meta/llama-3.1-8b-instruct-fp8",
+          "free": true,
+          "available": false,
+          "reasoning": "none",
+          "precision": "FP8 · explicit quantized variant",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        },
+        {
+          "provider": "openrouter",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "revision": "meta-llama/llama-3.1-8b-instruct",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "maxTokens": 117964,
+          "parameters": [
+            "frequency_penalty",
+            "logit_bias",
+            "logprobs",
+            "max_tokens",
+            "min_p",
+            "presence_penalty",
+            "repetition_penalty",
+            "response_format",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_k",
+            "top_logprobs",
+            "top_p"
+          ],
+          "promptPrice": 5e-8,
+          "completionPrice": 8e-8
+        },
+        {
+          "provider": "huggingface",
+          "model": "meta-llama/Llama-3.1-8B-Instruct:novita",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        },
+        {
+          "provider": "huggingface",
+          "model": "meta-llama/Llama-3.1-8B-Instruct:nscale",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        },
+        {
+          "provider": "huggingface",
+          "model": "meta-llama/Llama-3.1-8B-Instruct:featherless-ai",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        },
+        {
+          "provider": "huggingface",
+          "model": "meta-llama/Llama-3.1-8B-Instruct:deepinfra",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qwen354",
+      "name": "Qwen 3.5",
+      "family": "Qwen",
+      "size": "4B",
+      "checkpoint": "Qwen/Qwen3.5-4B",
+      "verified": true,
+      "source": "https://huggingface.co/Qwen/Qwen3.5-4B",
+      "routes": [
+        {
+          "provider": "huggingface",
+          "model": "Qwen/Qwen3.5-4B:featherless-ai",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qwen359",
+      "name": "Qwen 3.5",
+      "family": "Qwen",
+      "size": "9B",
+      "checkpoint": "Qwen/Qwen3.5-9B",
+      "verified": true,
+      "source": "https://huggingface.co/Qwen/Qwen3.5-9B",
+      "routes": [
+        {
+          "provider": "openrouter",
+          "model": "qwen/qwen3.5-9b",
+          "revision": "qwen/qwen3.5-9b-20260310",
+          "free": false,
+          "available": false,
+          "reasoning": "toggle",
+          "precision": "Provider undisclosed",
+          "maxTokens": 235929,
+          "parameters": [
+            "frequency_penalty",
+            "include_reasoning",
+            "logit_bias",
+            "logprobs",
+            "max_completion_tokens",
+            "max_tokens",
+            "min_p",
+            "presence_penalty",
+            "reasoning",
+            "repetition_penalty",
+            "response_format",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_k",
+            "top_logprobs",
+            "top_p"
+          ],
+          "promptPrice": 1.7e-7,
+          "completionPrice": 2.5e-7
+        },
+        {
+          "provider": "huggingface",
+          "model": "Qwen/Qwen3.5-9B:together",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        },
+        {
+          "provider": "huggingface",
+          "model": "Qwen/Qwen3.5-9B:featherless-ai",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        },
+        {
+          "provider": "huggingface",
+          "model": "Qwen/Qwen3.5-9B:ovhcloud",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        },
+        {
+          "provider": "huggingface",
+          "model": "Qwen/Qwen3.5-9B:deepinfra",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qwen3527",
+      "name": "Qwen 3.5",
+      "family": "Qwen",
+      "size": "27B",
+      "checkpoint": "Qwen/Qwen3.5-27B",
+      "verified": true,
+      "source": "https://huggingface.co/Qwen/Qwen3.5-27B",
+      "routes": [
+        {
+          "provider": "openrouter",
+          "model": "qwen/qwen3.5-27b",
+          "revision": "qwen/qwen3.5-27b-20260224",
+          "free": false,
+          "available": false,
+          "reasoning": "toggle",
+          "precision": "Provider undisclosed",
+          "maxTokens": 81920,
+          "parameters": [
+            "frequency_penalty",
+            "include_reasoning",
+            "logit_bias",
+            "logprobs",
+            "max_tokens",
+            "min_p",
+            "presence_penalty",
+            "reasoning",
+            "repetition_penalty",
+            "response_format",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_k",
+            "top_logprobs",
+            "top_p"
+          ],
+          "promptPrice": 2.6e-7,
+          "completionPrice": 0.0000026
+        },
+        {
+          "provider": "huggingface",
+          "model": "Qwen/Qwen3.5-27B:novita",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        },
+        {
+          "provider": "huggingface",
+          "model": "Qwen/Qwen3.5-27B:featherless-ai",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        },
+        {
+          "provider": "huggingface",
+          "model": "Qwen/Qwen3.5-27B:deepinfra",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qwen314",
+      "name": "Qwen 3",
+      "family": "Qwen",
+      "size": "14B",
+      "checkpoint": "Qwen/Qwen3-14B",
+      "verified": true,
+      "source": "https://huggingface.co/Qwen/Qwen3-14B",
+      "routes": [
+        {
+          "provider": "openrouter",
+          "model": "qwen/qwen3-14b",
+          "revision": "qwen/qwen3-14b-04-28",
+          "free": false,
+          "available": false,
+          "reasoning": "toggle",
+          "precision": "Provider undisclosed",
+          "maxTokens": 16384,
+          "parameters": [
+            "frequency_penalty",
+            "include_reasoning",
+            "logit_bias",
+            "logprobs",
+            "max_tokens",
+            "min_p",
+            "presence_penalty",
+            "reasoning",
+            "repetition_penalty",
+            "response_format",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_k",
+            "top_logprobs",
+            "top_p"
+          ],
+          "promptPrice": 1.2e-7,
+          "completionPrice": 2.4e-7
+        },
+        {
+          "provider": "huggingface",
+          "model": "Qwen/Qwen3-14B:nscale",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        },
+        {
+          "provider": "huggingface",
+          "model": "Qwen/Qwen3-14B:featherless-ai",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        },
+        {
+          "provider": "huggingface",
+          "model": "Qwen/Qwen3-14B:deepinfra",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gemma412",
+      "name": "Gemma 4",
+      "family": "Google",
+      "size": "12B",
+      "checkpoint": "google/gemma-4-12B-it",
+      "verified": true,
+      "source": "https://huggingface.co/google/gemma-4-12B-it",
+      "routes": []
+    },
+    {
+      "id": "gemma431",
+      "name": "Gemma 4",
+      "family": "Google",
+      "size": "31B",
+      "checkpoint": "google/gemma-4-31B-it",
+      "verified": true,
+      "source": "https://huggingface.co/google/gemma-4-31B-it",
+      "routes": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemma-4-31b-it:free",
+          "revision": "google/gemma-4-31b-it-20260402",
+          "free": true,
+          "available": false,
+          "reasoning": "toggle",
+          "precision": "Provider undisclosed",
+          "maxTokens": 32768,
+          "parameters": [
+            "include_reasoning",
+            "max_tokens",
+            "reasoning",
+            "response_format",
+            "seed",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_p"
+          ],
+          "promptPrice": 0,
+          "completionPrice": 0
+        },
+        {
+          "provider": "openrouter",
+          "model": "google/gemma-4-31b-it",
+          "revision": "google/gemma-4-31b-it-20260402",
+          "free": false,
+          "available": false,
+          "reasoning": "toggle",
+          "precision": "Provider undisclosed",
+          "maxTokens": 16384,
+          "parameters": [
+            "frequency_penalty",
+            "include_reasoning",
+            "logit_bias",
+            "logprobs",
+            "max_tokens",
+            "min_p",
+            "presence_penalty",
+            "reasoning",
+            "repetition_penalty",
+            "response_format",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_k",
+            "top_logprobs",
+            "top_p"
+          ],
+          "promptPrice": 2e-7,
+          "completionPrice": 4e-7
+        },
+        {
+          "provider": "huggingface",
+          "model": "google/gemma-4-31B-it:novita",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        },
+        {
+          "provider": "huggingface",
+          "model": "google/gemma-4-31B-it:featherless-ai",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        },
+        {
+          "provider": "huggingface",
+          "model": "google/gemma-4-31B-it:deepinfra",
+          "free": false,
+          "available": false,
+          "reasoning": "unknown",
+          "precision": "Provider undisclosed",
+          "parameters": [
+            "temperature",
+            "top_p",
+            "seed",
+            "max_tokens"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "olmo",
+      "name": "OLMo 3 Instruct",
+      "family": "Ai2",
+      "size": "7B",
+      "checkpoint": "allenai/Olmo-3-7B-Instruct",
+      "verified": true,
+      "source": "https://huggingface.co/allenai/Olmo-3-7B-Instruct",
+      "routes": []
+    },
+    {
+      "id": "olmothink",
+      "name": "OLMo 3 Think",
+      "family": "Ai2",
+      "size": "7B",
+      "checkpoint": "allenai/Olmo-3-7B-Think",
+      "verified": true,
+      "source": "https://huggingface.co/allenai/Olmo-3-7B-Think",
+      "routes": []
+    }
+  ],
+  "checkedAt": "2026-10-30T19:00:46.145Z",
+  "errors": [],
+  "credentials": {
+    "openrouter": false,
+    "huggingface": false,
+    "cloudflare": false,
+    "ollama": false,
+    "vllm": false
+  }
+}

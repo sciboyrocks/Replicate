@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-30T19:08:28.574Z",
+  "url": "http://127.0.0.1:3000",
+  "checks": [
+    "Dashboard renders all primary setup sections over HTTP",
+    "Create API plans exactly N × models trials",
+    "Ten independent demo calls complete with expected 8/10 numeric grades and no hidden context",
+    "Manual override preserves the automatic verdict and audit reason",
+    "CSV and JSON downloads contain every trial",
+    "Cancel aborts outstanding trials; resume completes only remaining slots and retains responses",
+    "Experiment history persists completed runs",
+    "Cross-origin writes are rejected",
+    "Invalid trial counts are rejected server-side"
+  ],
+  "experimentIds": [
+    "6a13a209-936d-4972-95c5-ddf19075217f",
+    "9f5ddced-481a-4ea8-a9d0-4b92a5b3038f"
+  ]
+}

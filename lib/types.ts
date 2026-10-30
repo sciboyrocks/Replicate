@@ -1,0 +1,101 @@
+export type Provider =
+  "demo" | "openrouter" | "huggingface" | "cloudflare" | "ollama" | "vllm";
+export type Model = {
+  id: string;
+  name: string;
+  family: string;
+  size: string;
+  checkpoint: string;
+  verified: boolean;
+  routes: Route[];
+  source: string;
+  note?: string;
+};
+export type Route = {
+  provider: Provider;
+  model: string;
+  free: boolean;
+  available: boolean;
+  reasoning: "toggle" | "always" | "none" | "unknown";
+  precision: string;
+  revision?: string;
+  maxTokens?: number;
+  parameters?: string[];
+  promptPrice?: number;
+  completionPrice?: number;
+};
+export type Config = {
+  title: string;
+  question: string;
+  reference: string;
+  rubric: string;
+  grading: "exact" | "normalized" | "numeric" | "semantic";
+  tolerance: number;
+  relativeTolerance: number;
+  models: string[];
+  n: number;
+  mode: "demo" | "live";
+  temperature: number;
+  topP: number;
+  seed: number | null;
+  maxTokens: number;
+  concurrency: number;
+  retries: number;
+  reasoning: "default" | "on" | "off";
+  allowPaid: boolean;
+  judgeModel: string;
+  judgeProvider: "openrouter" | "vllm";
+  modelsSnapshot?: Model[];
+  routes: Record<string, Route[]>;
+};
+export type Usage = {
+  prompt: number | null;
+  completion: number | null;
+  cost: number | null;
+  costSource: string;
+};
+export type Call = {
+  text: string;
+  reasoning?: string;
+  raw: unknown;
+  model: string;
+  provider: string;
+  routeModel: string;
+  precision: string;
+  revision?: string;
+  finishReason?: string;
+  usage: Usage;
+  latency: number;
+  requestId?: string;
+  simulated?: boolean;
+  messages: { role: string; content: string }[];
+  parameters: Record<string, unknown>;
+};
+export type Grade = { correct: boolean | null; reason: string; judge?: Call };
+export type Attempt = {
+  id: string;
+  modelId: string;
+  index: number;
+  status: "queued" | "running" | "done" | "error" | "cancelled";
+  response?: Call;
+  grade?: Grade;
+  override?: { correct: boolean; reason: string; at: string };
+  error?: string;
+  transports: {
+    at: string;
+    provider: string;
+    model: string;
+    phase?: "inference" | "judge";
+    error?: string;
+  }[];
+  startedAt?: string;
+  completedAt?: string;
+};
+export type Experiment = {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  status: "running" | "completed" | "cancelled" | "interrupted" | "failed";
+  config: Config;
+  attempts: Attempt[];
+};

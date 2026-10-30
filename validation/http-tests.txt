@@ -1,0 +1,10 @@
+PASS Dashboard renders all primary setup sections over HTTP
+PASS Create API plans exactly N × models trials
+PASS Ten independent demo calls complete with expected 8/10 numeric grades and no hidden context
+PASS Manual override preserves the automatic verdict and audit reason
+PASS CSV and JSON downloads contain every trial
+PASS Cancel aborts outstanding trials; resume completes only remaining slots and retains responses
+PASS Experiment history persists completed runs
+PASS Cross-origin writes are rejected
+PASS Invalid trial counts are rejected server-side
+9 HTTP checks passed.

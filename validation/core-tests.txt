@@ -1,0 +1,28 @@
+
+> replicate-research-lab@1.0.0 test
+> node --import tsx --test tests/*.test.ts
+
+✔ normalized grading preserves punctuation and applies Unicode normalization (0.894041ms)
+✔ numeric grading accepts only finite standalone numbers and both tolerance types (0.164167ms)
+✔ Wilson intervals known values, empty and extreme outcomes (0.088709ms)
+✔ schema rejects missing gold, invalid counts, unsafe settings; allows rubric-only judging (2.239958ms)
+✔ fresh requests contain one question and never leak gold, rubric, or previous answers (9.271084ms)
+✔ reasoning toggle changes actual supported provider parameter and rejects unsupported route (0.39325ms)
+✔ provider error classification separates rate/transport errors from permanent errors (0.458ms)
+✔ semantic judge records usage and treats invalid JSON as ungraded (0.440875ms)
+✔ runner executes exact trial count, persists, applies overrides, and exports safely (1652.747125ms)
+✔ cancellation and resume preserve completed attempts and complete only remaining N (5776.739958ms)
+✔ transient network retry stays inside N and failover preserves exact route model (1016.41075ms)
+✔ judge failure and resume never regenerate an already saved candidate response (48.206959ms)
+✔ missing grades and errors stay out of the graded denominator (0.406375ms)
+✔ reopening persisted running state marks interruption without losing the saved response (187.526625ms)
+✔ Cloudflare and local adapters use their actual wire protocols and preserve model identity (1.274584ms)
+✔ catalog excludes lookalike checkpoints and non-live provider mappings (5.531542ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8976.807

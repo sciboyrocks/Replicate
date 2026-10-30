@@ -1,0 +1,215 @@
+{
+  "checked": "2026-10-31",
+  "verification": "Official documentation and public catalogs only. No authenticated inference performed.",
+  "models": [
+    {
+      "key": "llama32_3b",
+      "checkpoint": "meta-llama/Llama-3.2-3B-Instruct",
+      "checkpointSource": "https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct",
+      "openrouterId": "meta-llama/llama-3.2-3b-instruct",
+      "freeCoverage": "cloudflare",
+      "checkpointReasoning": false,
+      "providerReasoningMustBeVerified": true,
+      "precision": "provider-dependent; unknown unless explicitly returned"
+    },
+    {
+      "key": "llama31_8b",
+      "checkpoint": "meta-llama/Llama-3.1-8B-Instruct",
+      "checkpointSource": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct",
+      "openrouterId": "meta-llama/llama-3.1-8b-instruct",
+      "freeCoverage": "cloudflare-fp8",
+      "checkpointReasoning": false,
+      "providerReasoningMustBeVerified": true,
+      "precision": "provider-dependent; unknown unless explicitly returned"
+    },
+    {
+      "key": "qwen35_4b",
+      "checkpoint": "Qwen/Qwen3.5-4B",
+      "checkpointSource": "https://huggingface.co/Qwen/Qwen3.5-4B",
+      "openrouterId": null,
+      "freeCoverage": "none-verified",
+      "checkpointReasoning": true,
+      "providerReasoningMustBeVerified": true,
+      "precision": "provider-dependent; unknown unless explicitly returned"
+    },
+    {
+      "key": "qwen35_9b",
+      "checkpoint": "Qwen/Qwen3.5-9B",
+      "checkpointSource": "https://huggingface.co/Qwen/Qwen3.5-9B",
+      "openrouterId": "qwen/qwen3.5-9b",
+      "freeCoverage": "none-verified",
+      "checkpointReasoning": true,
+      "providerReasoningMustBeVerified": true,
+      "precision": "provider-dependent; unknown unless explicitly returned"
+    },
+    {
+      "key": "qwen35_27b",
+      "checkpoint": "Qwen/Qwen3.5-27B",
+      "checkpointSource": "https://huggingface.co/Qwen/Qwen3.5-27B",
+      "openrouterId": "qwen/qwen3.5-27b",
+      "freeCoverage": "none-verified",
+      "checkpointReasoning": true,
+      "providerReasoningMustBeVerified": true,
+      "precision": "provider-dependent; unknown unless explicitly returned"
+    },
+    {
+      "key": "qwen3_14b",
+      "checkpoint": "Qwen/Qwen3-14B",
+      "checkpointSource": "https://huggingface.co/Qwen/Qwen3-14B",
+      "openrouterId": "qwen/qwen3-14b",
+      "freeCoverage": "none-verified",
+      "checkpointReasoning": true,
+      "providerReasoningMustBeVerified": true,
+      "precision": "provider-dependent; unknown unless explicitly returned"
+    },
+    {
+      "key": "gemma4_12b",
+      "checkpoint": "google/gemma-4-12B-it",
+      "checkpointSource": "https://huggingface.co/google/gemma-4-12B-it",
+      "openrouterId": null,
+      "freeCoverage": "none-verified",
+      "checkpointReasoning": true,
+      "providerReasoningMustBeVerified": true,
+      "precision": "provider-dependent; unknown unless explicitly returned"
+    },
+    {
+      "key": "gemma4_31b",
+      "checkpoint": "google/gemma-4-31B-it",
+      "checkpointSource": "https://huggingface.co/google/gemma-4-31B-it",
+      "openrouterId": "google/gemma-4-31b-it:free",
+      "freeCoverage": "openrouter",
+      "checkpointReasoning": true,
+      "providerReasoningMustBeVerified": true,
+      "precision": "provider-dependent; unknown unless explicitly returned"
+    },
+    {
+      "key": "olmo3_7b_instruct",
+      "checkpoint": "allenai/Olmo-3-7B-Instruct",
+      "checkpointSource": "https://huggingface.co/allenai/Olmo-3-7B-Instruct",
+      "openrouterId": null,
+      "freeCoverage": "trial-only-publicai",
+      "checkpointReasoning": false,
+      "providerReasoningMustBeVerified": true,
+      "precision": "provider-dependent; unknown unless explicitly returned"
+    },
+    {
+      "key": "olmo3_7b_think",
+      "checkpoint": "allenai/Olmo-3-7B-Think",
+      "checkpointSource": "https://huggingface.co/allenai/Olmo-3-7B-Think",
+      "openrouterId": null,
+      "freeCoverage": "none-verified",
+      "checkpointReasoning": true,
+      "providerReasoningMustBeVerified": true,
+      "precision": "provider-dependent; unknown unless explicitly returned"
+    }
+  ],
+  "providers": [
+    {
+      "id": "openrouter",
+      "classification": "recurring-free-variants",
+      "signup": true,
+      "apiKey": true,
+      "freeLimits": {
+        "rpm": 20,
+        "rpd": 50,
+        "rpdAfterCreditPurchase": 1000,
+        "purchaseUSD": 10
+      },
+      "failedRequestsConsumeQuota": true,
+      "source": "https://openrouter.ai/collections/free-models"
+    },
+    {
+      "id": "cloudflare",
+      "classification": "recurring-free-allocation",
+      "signup": true,
+      "apiKey": true,
+      "freeLimits": {
+        "neuronsPerDay": 10000,
+        "textGenerationRPM": 300
+      },
+      "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/"
+    },
+    {
+      "id": "groq",
+      "classification": "no-requested-free-route-verified",
+      "signup": true,
+      "apiKey": true,
+      "note": "llama-3.1-8b-instant currently Enterprise/Contact Sales",
+      "source": "https://console.groq.com/docs/models"
+    },
+    {
+      "id": "huggingface",
+      "classification": "paid-credits",
+      "signup": true,
+      "apiKey": true,
+      "freeUserMonthlyCreditsUSD": 0,
+      "source": "https://huggingface.co/docs/inference-providers/en/pricing"
+    },
+    {
+      "id": "publicai",
+      "classification": "starter-trial-credit",
+      "signup": true,
+      "apiKey": true,
+      "starterCreditUSD": 2,
+      "source": "https://platform.publicai.co/docs"
+    },
+    {
+      "id": "cerebras",
+      "classification": "no-exact-shared-model-match",
+      "signup": true,
+      "apiKey": true,
+      "source": "https://inference-docs.cerebras.ai/models/overview"
+    },
+    {
+      "id": "google",
+      "classification": "no-direct-exact-model-match-verified",
+      "signup": true,
+      "apiKey": true,
+      "source": "https://ai.google.dev/gemini-api/docs/models"
+    }
+  ],
+  "cloudflareLlama32": {
+    "id": "@cf/meta/llama-3.2-3b-instruct",
+    "parameters": {
+      "max_tokens": true,
+      "temperature": {
+        "min": 0,
+        "max": 5
+      },
+      "top_p": {
+        "min": 0.001,
+        "max": 1
+      },
+      "seed": {
+        "min": 1,
+        "max": 9999999999
+      }
+    },
+    "source": "https://developers.cloudflare.com/workers-ai/models/llama-3.2-3b-instruct/"
+  },
+  "openrouterGemma31Free": {
+    "id": "google/gemma-4-31b-it:free",
+    "canonicalSlug": "google/gemma-4-31b-it-20260402",
+    "upstream": "Google AI Studio",
+    "tag": "google-ai-studio",
+    "precision": "unknown",
+    "context": 262144,
+    "max_tokens": 32768,
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": false
+    },
+    "supportedParameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "temperature",
+      "top_p",
+      "seed",
+      "response_format",
+      "tools",
+      "tool_choice"
+    ],
+    "source": "https://openrouter.ai/api/v1/models/google/gemma-4-31b-it:free/endpoints"
+  }
+}
